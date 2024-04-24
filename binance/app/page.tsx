@@ -1,10 +1,10 @@
 
 import { cache, useState } from 'react';
 import CryptoTrade from '@/components/CryptoTrade';
-import { BASE_API_URL } from '@/lib/const'
+import { BASE_API_URL } from '@/lib/const';
 
-export default async function CryptoPage() {
   // const [ws, setWs] = useState<WebSocket | null>(null);
+export default async function CryptoPage () {
 
   //   // Créer la connexion WebSocket
   //   const websocket = new WebSocket('wss://stream.binance.com:9443/ws/etheur@trade');
