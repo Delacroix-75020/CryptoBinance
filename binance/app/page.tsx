@@ -1,6 +1,7 @@
 
 import { cache, useState } from 'react';
 import CryptoTrade from '@/components/CryptoTrade';
+import { BASE_API_URL } from '@/lib/const'
 
 export default async function CryptoPage() {
   // const [ws, setWs] = useState<WebSocket | null>(null);
@@ -15,7 +16,7 @@ export default async function CryptoPage() {
   //     setWs(sotckObject.p);
   //   };
 
-    const response = await fetch('http://localhost:3000/api/getcrypto', { cache: 'no-cache' });
+    const response = await fetch(`${BASE_API_URL}/api/getcrypto`, { cache: 'no-cache' });
     if (!response.ok) {
         throw new Error('Erreur lors de la récupération des données');
     }
