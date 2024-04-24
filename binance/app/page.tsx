@@ -20,12 +20,11 @@ export default async function CryptoPage () {
     if (!response.ok) {
         throw new Error('Erreur lors de la récupération des données');
     }
-
+    
     const data = await response.json();
     console.log(data)
     
-
   return (
-    <div></div>
+    <CryptoTrade data={data} />
   );
 }
