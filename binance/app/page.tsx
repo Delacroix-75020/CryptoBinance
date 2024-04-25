@@ -1,7 +1,8 @@
-
 import { cache, useState } from 'react';
 import CryptoTrade from '@/components/CryptoTrade';
 import { BASE_API_URL } from '@/lib/const';
+
+export const dynamic = 'force-dynamic'
 
   // const [ws, setWs] = useState<WebSocket | null>(null);
 export default async function CryptoPage () {
@@ -22,9 +23,8 @@ export default async function CryptoPage () {
     }
     
     const data = await response.json();
-    console.log(data)
     
   return (
-    <CryptoTrade data={data} />
+    <CryptoTrade cryptoData={data} />
   );
 }
