@@ -10,10 +10,11 @@ export async function GET(request:NextRequest) {
     try {
         await client.connect();
         const database = client.db('admin')
-        const collection = database.collection('binance_batch_top_20_asc')
+        const collection = database.collection('binance_streaming')
 
         const binanceData = await collection.find({}).toArray()
-
+        console.log(binanceData.pop())
+        
         return new Response(
             JSON.stringify({ success: true, data: binanceData }),
             {

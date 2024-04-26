@@ -25,6 +25,6 @@ export default async function CryptoPage () {
     const data = await response.json();
     
   return (
-    <CryptoTrade cryptoData={data} />
+    <CryptoTrade data={data} />
   );
 }
