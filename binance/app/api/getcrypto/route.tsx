@@ -13,7 +13,7 @@ export async function GET(request:NextRequest) {
         const collection = database.collection('binance_streaming')
 
         const binanceData = await collection.find({}).toArray()
-        console.log(binanceData.pop())
+        console.log(binanceData.length, binanceData.pop())
         
         return new Response(
             JSON.stringify({ success: true, data: binanceData }),

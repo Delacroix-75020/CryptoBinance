@@ -1,4 +1,5 @@
-import { cache, useState } from 'react';
+
+import { cache, useState, useEffect } from 'react';
 import CryptoTrade from '@/components/CryptoTrade';
 import { BASE_API_URL } from '@/lib/const';
 
@@ -24,7 +25,7 @@ export default async function CryptoPage () {
     
     const data = await response.json();
     
-  return (
+      return (
     <CryptoTrade data={data} />
   );
 }
